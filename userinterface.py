@@ -1,13 +1,13 @@
 from datetime import time
 import streamlit as st
 import pandas as pd
-from gensim.models import Word2Vec
+import pickle
 from matplotlib import pyplot as plt
 from sklearn import manifold
 
 
 def word_context(word):
-    w2v_model = Word2Vec.load("w2v_word_context_v2")
+    w2v_model = pickle.load(open('model.pkl', 'rb'))
 
     ## Visualize word and its context in 3D Vector Space
     fig = plt.figure()
