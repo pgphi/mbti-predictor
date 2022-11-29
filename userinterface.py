@@ -70,6 +70,7 @@ def userinterface():
 
 
     word = st.text_input("Type in your favorite word:", placeholder="i.e. thinking")
+    st.success("Stay patient. It takes a few seconds for the model to make a prediction.")
 
     while word == False:
         time.sleep(999999)
