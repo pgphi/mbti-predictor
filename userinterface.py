@@ -69,7 +69,7 @@ def userinterface():
     st.subheader("Analyzing The Word Context based on Personality Types 💬")
 
 
-    word = st.text_input("Type in your favorite word:", placeholder="i.e. thinking")
+    word = st.text_input("Type in your favorite word:", placeholder="i.e. thinking", help="please use only lower case")
     st.success("Stay patient. It takes a few seconds for the model to make a prediction.")
 
     while word == False:
@@ -91,4 +91,4 @@ try:
         pass
 
 except KeyError:
-        st.info("Word not in corpus. Try using another word.")
+        st.info("Word not in corpus or upper case. Try using another word or lower case (input is case sensitive).")
